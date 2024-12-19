@@ -12,6 +12,7 @@ sudo apt install libtool
 ```
 
 2. Build authorized-psi
+```
 git clone https://github.com/phuocchubeo123/authorized-psi.git
 cd authorized-psi
 python3 build.py -DVOLE_PSI_ENABLE_BOOST=ON
