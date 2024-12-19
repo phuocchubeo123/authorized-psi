@@ -17,7 +17,8 @@ cd authorized-psi
 python3 build.py -DVOLE_PSI_ENABLE_BOOST=ON
 ```
 
-
+After building, the built executables are in out/build/
+I believe that the main file is in out/build/frontend
 
 # Vole-PSI
 
