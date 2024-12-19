@@ -2,6 +2,21 @@
 
 Ongoing project.
 
+Setup guide with EC2-Ubuntu-Noble-24.04:
+1. Install g++, cmake, libtool
+```
+sudo apt-get update
+sudo apt install g++
+sudo apt install cmake
+sudo apt install libtool
+```
+
+2. Build authorized-psi
+git clone https://github.com/phuocchubeo123/authorized-psi.git
+cd authorized-psi
+python3 build.py -DVOLE_PSI_ENABLE_BOOST=ON
+```
+
 
 
 # Vole-PSI
