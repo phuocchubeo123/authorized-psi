@@ -16,6 +16,9 @@ include(cmake/findDependancies.cmake)
 # build volePSI
 add_subdirectory(volePSI)
 
+# ongoing fri commitment
+add_subdirectory(fri)
+
 # build the tests.
 add_subdirectory(tests)
 
