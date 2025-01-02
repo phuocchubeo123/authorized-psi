@@ -61,6 +61,8 @@ namespace volePSI
 		auto diffPtr = std::unique_ptr<u8[]>{};
 		auto diffU8 = span<u8>{};
 
+		std::cout << "Test printing sender cout!" << "\n";
+
 		setTimePoint("RsOpprfSender::send begin");
 		n = X.size();
 		m = val.cols();

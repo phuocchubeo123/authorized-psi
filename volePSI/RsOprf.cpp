@@ -1,4 +1,5 @@
 #include "RsOprf.h"
+#include "filesystem"
 
 namespace volePSI
 {
@@ -47,8 +48,11 @@ namespace volePSI
 		mB = mVoleSender.mB;
 		setTimePoint("RsOprfSender::send-vole");
 
+		auto authorized_psi_folder = std::filesystem::current_path().parent_path().parent_path().parent_path().parent_path();
+		auto rust_commit_file = authorized_psi_folder / "rust_commit" / "target" / "debug" / "rust_commit";
 
-
+		auto command = rust_commit_file.string();
+		std::system(command.c_str());
 
 		if (mMalicious)
 		{
@@ -62,6 +66,8 @@ namespace volePSI
 		pp = span<block>(pPtr.get(), mPaxos.size());
 
 		setTimePoint("RsOprfSender::alloc ");
+
+		std::cout << "Sender computing B Delta\n";
 
 		if (0)
 		{
